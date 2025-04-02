@@ -1,3 +1,8 @@
+//실습)
+//-클래스:입력(FrontEnd)관리(BackEnd)DB(Database)Test
+//-List<Map>
+//-List<클래스> : 과제
+//회원정보 관리 시스템을 만들어보시오
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
