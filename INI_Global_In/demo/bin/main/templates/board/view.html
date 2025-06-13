@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>게시글 상세보기</title>
+</head>
+<body>
+<h2 th:text="${post.board_title}">제목</h2>
+
+<p>
+    작성자: <span th:text="${post.user_nickname}"></span><br>
+    작성일: <span th:text="${#dates.format(post.board_write_date, 'yyyy-MM-dd HH:mm')}"></span><br>
+    조회수: <span th:text="${post.board_views}"></span><br>
+    카테고리: <span th:text="${post.category_name}"></span><br>
+    말머리: <span th:text="${post.tag_name}"></span>
+</p>
+
+<hr>
+
+<div th:utext="${post.board_content}"></div> <!-- HTML 포함 표시 -->
+
+<a th:href="@{/board/list}">목록으로</a>
+</body>
+</html>

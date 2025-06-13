@@ -1,0 +1,38 @@
+<!-- templates/board/write.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>게시글 작성</title>
+</head>
+<body>
+<h2>게시글 작성</h2>
+
+<form th:action="@{/board/write}" method="post" enctype="multipart/form-data">
+    <label>제목:</label><br>
+    <input type="text" name="board_title" required><br><br>
+
+    <label>말머리:</label><br>
+    <select name="board_tag">
+    <option value="">말머리 선택</option>
+    <option th:each="tag : ${tags}" th:value="${tag.tagId}" th:text="${tag.tagName}"></option>
+</select>
+    <br><br>
+
+    <label>카테고리:</label><br>
+   <select name="board_category">
+    <option value="">카테고리 선택</option>
+    <option th:each="category : ${categories}" th:value="${category.categoryId}" th:text="${category.categoryName}"></option>
+</select>
+    <br><br>
+
+    <label>내용:</label><br>
+    <textarea name="board_content" rows="10" cols="50" required></textarea><br><br>
+
+    <label>이미지 업로드:</label><br>
+    <input type="file" name="uploadFiles" multiple><br><br>
+
+    <button type="submit">작성</button>
+</form>
+
+</body>
+</html>

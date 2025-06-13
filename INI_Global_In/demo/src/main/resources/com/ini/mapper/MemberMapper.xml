@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ini.member.mapper.MemberMapper">
+
+	<select id="findAllMember" resultType="com.ini.member.vo.MemberDTO">
+		select * from ini_user
+	</select>
+
+	<select id="findMemberById" resultType="com.ini.member.vo.MemberDTO">
+		select * from ini_user where user_id = #{user_id}
+	</select>
+	
+	<select id="findFollowById" resultType="com.ini.member.vo.MemberFollowDTO">
+		select * from user_follow where follower_id = #{user_id}
+	</select>
+
+	<select id="findBoardById" resultType="com.ini.board.vo.BoardDTO">
+		select * from ini_board where user_id = #{user_id}
+	</select>
+	
+	<select id="findLikeById" resultType="com.ini.board.vo.BoardLikeDTO">
+		select * from board_like where user_id = #{user_id}
+	</select>
+	
+	<select id="findReplyById" resultType="com.ini.board.vo.BoardReplyDTO">
+		select * from board_reply where reply_writer = #{user_id}
+	</select>
+	
+	<select id="findFavoriteById" resultType="com.ini.member.vo.MemberFavoriteDTO">
+		select * from user_favorite where user_id = #{user_id}
+	</select>
+	
+</mapper>

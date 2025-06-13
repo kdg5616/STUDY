@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+.profile_container {
+	display: flex;
+	justify-content: center;
+}
+
+.profile_image {
+	width: 206px;
+	height: 206px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.profile_update_button_container {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.profile_update_button {
+	font-size: 24px;
+	width: 102px;
+	height: 24px;
+	text-align: center;
+}
+
+.profile_nickname_container {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.profile_email_container {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.profile_nickname {
+	font-size: 50px;
+	width: 203px;
+	height: 45px;
+	text-align: center;
+	margin: 0 !important;
+}
+
+.profile_email {
+	font-size: 40px;
+	width: 341px;
+	height: 38px;
+	text-align: center;
+	margin: 0 !important;
+}
+
+.profile_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 97px;
+}
